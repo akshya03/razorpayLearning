@@ -1,4 +1,5 @@
 const express = require('express');
+const Razorpay = require('razorpay');
 
 const app = express();
 
@@ -8,7 +9,7 @@ app.set('view engine', 'ejs');
 
 app.get("/", (req, res)=>{
     res.send("Hi, home route is working fine!! ")
-})
+});
 
 app.get('/indexpage', (req, res)=>{
     res.render("index");  //no need to specify path as it will automatically access VIEWS folder
